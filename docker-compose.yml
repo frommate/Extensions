@@ -1,0 +1,21 @@
+version: '3.8'
+services:
+  chromium:
+    image: lscr.io/linuxserver/chromium:latest
+    container_name: DK_browser
+    privileged: true
+    environment:
+      - TITLE=DKnodes
+      - DISPLAY=:1
+      - PUID=1000
+      - PGID=1000
+      - CUSTOM_USER=${USERNAME}
+      - PASSWORD=${PASSWORD}
+      - LANGUAGE=en_US.UTF-8
+      - CHROME_CLI=https://app.getgrass.io/register/?referralCode=XVOycmhYOK-Tag4 https://app.gradient.network/signup?code=3GW5E https://app.blockmesh.xyz/register?invite_code=DK https://app.nodepay.ai/register?ref=eNDlY7796a777HI https://dataquest.nvg8.io//signup?ref=815568 https://www.starpower.world/wallet?ReferralCode=XXUNCE
+    volumes:
+      - ${HOME}/chromium/config:/config
+    ports:
+      - "0.0.0.0:${PORT}:3000"  
+    shm_size: '2gb'
+    restart: unless-stopped
