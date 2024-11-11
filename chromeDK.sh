@@ -23,6 +23,7 @@ display_ascii() {
     echo -e "    ${YELLOW} / /_/ / /| |   / /|  / /_/ / /_/ / /___ ___/ / ${RESET}"
     echo -e "    ${MAGENTA}/_____/_/ |_|  /_/ |_/\____/_____/_____//____/  ${RESET}"
     echo -e "    ${MAGENTA}${ICON_TELEGRAM} Follow us on Telegram: https://t.me/dknodes${RESET}"
+    echo -e "    ${MAGENTA}📢 Follow us on Twitter: https://x.com/dknodes${RESET}"
     echo -e ""
     echo -e ""
     echo -e ""
@@ -43,6 +44,7 @@ install_docker() {
         sudo chmod +x /usr/local/bin/docker-compose
     fi
     echo -e "${GREEN}Docker and Docker Compose are installed.${RESET}"
+    read -p "Press enter to continue..."
 }
 
 # Main installation and setup process
@@ -64,12 +66,14 @@ install_browser() {
     echo -e "${GREEN}Starting Docker Compose to install the browser...${RESET}"
     docker-compose up -d
     echo -e "${GREEN}✅ Browser successfully installed and running on port ${PORT}.${RESET}"
+    read -p "Press enter to continue..."
 }
 
 restart_browser(){
-    echo -e "${YELLOW}Restart browser...${RESET}"
+    echo -e "${YELLOW}Restarting browser...${RESET}"
     docker-compose restart
     echo -e "${GREEN}✅ Browser restarted.${RESET}"
+    read -p "Press enter to continue..."
 }
 
 # Stop the Docker Compose services
@@ -77,6 +81,7 @@ stop_browser() {
     echo -e "${YELLOW}Stopping the browser...${RESET}"
     docker-compose down
     echo -e "${GREEN}✅ Browser stopped.${RESET}"
+    read -p "Press enter to continue..."
 }
 
 # Main menu
@@ -107,6 +112,7 @@ while true; do
             ;;
         *)
             echo -e "${RED}Invalid input. Please try again.${RESET}"
+            read -p "Press enter to continue..."
             ;;
     esac
 done
