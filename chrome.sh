@@ -17,7 +17,7 @@ ICON_EXIT="🚪"
 
 # Function to display ASCII logo and Telegram link
 display_ascii() {
-    echo -e " Hi mate, Please choose an option"
+    echo -e ${RED} Hi mate, please choose an option  ${RESET}"
     echo -e ""
     echo -e ""
     echo -e ""
