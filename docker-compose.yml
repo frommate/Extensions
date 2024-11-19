@@ -2,10 +2,10 @@ version: '3.8'
 services:
   chromium:
     image: lscr.io/linuxserver/chromium:latest
-    container_name: DK_browser
+    container_name: Extensions
     privileged: true
     environment:
-      - TITLE=DKnodes
+      - TITLE=Extenstions
       - DISPLAY=:1
       - PUID=1000
       - PGID=1000
