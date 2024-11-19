@@ -12,7 +12,8 @@ services:
       - CUSTOM_USER=${USERNAME}
       - PASSWORD=${PASSWORD}
       - LANGUAGE=en_US.UTF-8
-      - CHROME_CLI=https://app.getgrass.io/register/?referralCode=XVOycmhYOK-Tag4 https://app.gradient.network/signup?code=3G6W5E https://app.blockmesh.xyz/register?invite_code=DK https://app.nodepay.ai/register?ref=eNDlY7796a777HI https://dataquest.nvg8.io//signup?ref=815568 https://www.starpower.world/wallet?ReferralCode=XXUNCE https://bless.network/dashboard?ref=RRUIUE
+      - CHROME_CLI=https://app.nodepay.ai/register?ref=cQAO87TearcupyK https://app.blockmesh.xyz/register?invite_code=b0ad990a-6273-4684-804c-20cad857ec5d https://r.oasis.ai/bravesan https://bless.network/dashboard?ref=GPY5BZ	
+ https://sepolia-faucet.pk910.de/ https://app.gradient.network/signup?code=I70DQ1 
     volumes:
       - ${HOME}/chromium/config:/config
     ports:
